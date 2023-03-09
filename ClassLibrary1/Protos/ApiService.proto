@@ -1,0 +1,111 @@
+syntax = "proto3";
+package ProtoApi;
+option csharp_namespace = "ApiService";
+
+service SheduleService{
+      rpc GetSubjectFromDbRPC(Wrap) returns (SubjectsFromDb);
+      rpc GetTutorsFromDbRPC(Wrap) returns (TutorsFromDb);
+      rpc GetAuditoriumFromDbRPC(Wrap) returns (AuditoriumsFromDb);
+      rpc GetTypeFromDbRPC(Wrap) returns (TypesFromDb);
+      rpc GetGroupFromDbRPC(Wrap) returns (GroupsFromDb);
+      rpc GetSheduleFromDb(Filter) returns (SheduleArrayByWeek);
+      rpc AddShedule(AllSheduleArray) returns (Wrap);
+      rpc CheckAuth(AuthorizationContext) returns (AuthorizationResult);
+      rpc GetSheduleFromDbForTutor(Filter) returns (SheduleArrayByWeek);
+}
+
+message Wrap{}
+
+message AuthorizationContext{
+  string Login = 1;
+  string Pass = 2;
+}
+
+message AuthorizationResult{
+  string IsAccept = 1;
+  int32 Role = 2;
+}
+
+message Filter{
+  string Filter = 1;
+  int32 value = 2;
+}
+
+message AllSheduleArray{
+  repeated SheduleObject Objects = 1;
+}
+
+message SheduleArrayByWeek{
+  repeated SheduleArrayByDay DaysOfObjects = 1;
+}
+
+message SheduleArrayByDay{
+  repeated StringSheduleObject ObjectsString = 1;
+}
+
+message StringSheduleObject{
+  string Subject = 1;
+  string Tutor = 2;
+  string Auditorium = 3;
+  string Type = 4;
+  string Group = 5;
+  DateTime Dates = 6;
+  int32 Number = 7;
+}
+
+message SheduleObject{
+    int32 Subject = 1;
+    int32 Tutor = 2;
+    int32 Auditorium = 3;
+    int32 Type = 4;
+    int32 Group = 5;
+    DateTime Dates = 6;
+    int32 Number = 7;
+}
+
+message DateTime {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+  int32 hours = 4;
+  int32 minutes = 5;
+  int32 seconds = 6;
+}
+
+message SubjectsFromDb{
+  repeated StructSubject Subjects = 1;
+}
+message StructSubject {
+  int32 Id = 1;
+  string SubjectItem = 2;
+}
+message TutorsFromDb{
+  repeated StructTutor Tutors = 1;
+}
+message StructTutor {
+  int32 Id = 1;
+  string SecondName = 2;
+  string FirstName = 3;
+  string LastName = 4;
+}
+message AuditoriumsFromDb{
+  repeated StructClassroom Auditoriums = 1;
+}
+message StructClassroom {
+  int32 Id = 1;
+  string Classroom = 2;
+}
+message TypesFromDb{
+  repeated StructType Types = 1;
+}
+message StructType {
+  int32 Id = 1;
+  string Type = 2;
+}
+message GroupsFromDb{
+  repeated StructGroup Groups = 1;
+}
+message StructGroup {
+  int32 Id = 1;
+  string GroupName = 2;
+}

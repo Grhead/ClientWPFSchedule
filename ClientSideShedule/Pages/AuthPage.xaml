@@ -1,0 +1,89 @@
+﻿<Page x:Class="ClientSideShedule.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ClientSideShedule.Pages"
+      xmlns:vm="clr-namespace:ClientSideShedule"
+      d:DataContext="{d:DesignInstance Type=vm:AuthClassClient}"
+      mc:Ignorable="d"
+      Height="780" Width="1600"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="18"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      Title="AuthPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border 
+            CornerRadius="6" 
+            BorderBrush="Gray"
+            MaxWidth="600"
+            MaxHeight="500"
+            Padding="10"
+            BorderThickness="4">
+            <StackPanel 
+            VerticalAlignment="Center" 
+            Grid.Row="1">
+                <TextBlock
+                    Style="{DynamicResource MaterialDesignBody1TextBlock}"
+                    Foreground="Black"
+                    HorizontalAlignment="Center"
+                    FontSize="45"
+                    MaxWidth="400"
+                    MinHeight="50"
+                    Text="Вход"
+                    Margin="20">
+                </TextBlock>
+                <TextBox
+                Grid.Row="0"
+                Style="{DynamicResource MaterialDesignTextBox}"
+                Text="{Binding LoginTextBox}"
+                Foreground="Black"
+                FontSize="45"
+                MaxWidth="400"
+                MinHeight="50"
+                Margin="20"
+                VerticalAlignment="Bottom"
+                BorderThickness="2 2 2 0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Bottom"
+                BorderBrush="Gray">
+                </TextBox>
+                <PasswordBox
+                Grid.Row="1"
+                Style="{DynamicResource MaterialDesignPasswordBox}"
+                Name="PasswordBox"
+                FontSize="45"
+                MaxWidth="400"
+                MinHeight="50"
+                Margin="20"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Bottom"
+                BorderThickness="2 2 2 0"
+                BorderBrush="Gray">
+                </PasswordBox>
+                <Button
+                VerticalAlignment="Top"
+                MaxWidth="400"
+                MinHeight="50"
+                Content="Войти"
+                Foreground="White"
+                FontSize="35"
+                Grid.Row="2"
+                Margin="20"
+                Style="{DynamicResource MaterialDesignFlatLightBgButton}"
+                Command="{Binding CheckCommand}"
+                Click="Button_Click">
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

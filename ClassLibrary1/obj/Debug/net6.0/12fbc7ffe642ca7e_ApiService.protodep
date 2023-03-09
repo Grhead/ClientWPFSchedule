@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/ApiService.cs \
+obj\Debug\net6.0\Protos/ApiServiceGrpc.cs: Protos/ApiService.proto
