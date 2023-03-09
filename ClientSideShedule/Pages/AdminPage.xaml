@@ -170,7 +170,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -343,7 +343,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -387,7 +387,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -431,7 +431,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -475,7 +475,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -519,7 +519,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -563,7 +563,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
@@ -607,7 +607,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border 
-                            CornerRadius="6" 
+                            CornerRadius="3" 
                             BorderBrush="Gray"
                             MinWidth="105"
                             MaxHeight="500"
